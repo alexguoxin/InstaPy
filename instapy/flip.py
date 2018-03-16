@@ -13,9 +13,9 @@ import skimage.io
 import matplotlib.pyplot as plt
 import sys
 import os
-%matplotlib inline
+#%matplotlib inline
 
-def flip(img, direction):
+def flip(img, direction,output_path):
     '''
     Flips an image in either horizonatl or vertical direction
     Arguments:
@@ -25,7 +25,8 @@ def flip(img, direction):
     '''
     
     #Reading image file as matrix
-    input_mat = plt.imread(img)
+    #input_mat = plt.imread(img)
+    input_mat = skimage.io.imread(img)
     
     #Loop for direction to be either horizontal or vertical
     
@@ -38,7 +39,6 @@ def flip(img, direction):
 
     #Horizontal Flip
     elif direction == "h":
-        elif direction == "h":
         asc=range(0, input_mat.shape[1])
         desc=list(reversed(asc))
         output_mat = input_mat.copy()
@@ -47,6 +47,7 @@ def flip(img, direction):
         
     #Converting data type
     output_mat=np.array(output_mat, dtype=np.uint8)
-
+    
     #Save flipped image 
-    plt.imsave("flipped.png",output_mat)
+    #plt.imsave("flipped.png",output_mat)
+    skimage.io.imsave(output_path, output_mat)
