@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "instapy/test/test_blur.py::test_blur1": true,
   "instapy/test/test_blur.py::test_blur2": true,
   "instapy/test/test_blur.py::test_blur3": true,
@@ -9,4 +10,9 @@
   "instapy/test/test_greyscale.py::test_non_string_output": true,
   "instapy/test/test_greyscale.py::test_nonexistent_input_path": true,
   "instapy/test/test_greyscale.py::test_nonexistent_output_path": true
+=======
+  "instapy/test/test_flip.py::test_flip1": true,
+  "instapy/test/test_flip.py::test_flip2": true,
+  "instapy/test/test_flip.py::test_flip3": true
+>>>>>>> upstream/master
 }
