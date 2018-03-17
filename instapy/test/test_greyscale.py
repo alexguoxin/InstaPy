@@ -41,7 +41,7 @@ def test_greyscale1():
     greyscale("instapy/test/test_img/greyscale/test_img1.jpg",
               "instapy/test/test_img/greyscale/test_img1_gs.jpg")
     output = plt.imread("instapy/test/test_img/greyscale/test_img1_gs.jpg")[:, :, :3]
-    assert !np.array_equal(output, test_img1_gs), "The greyscale function does not work properly."
+    assert not np.array_equal(output, test_img1_gs), "The greyscale function does not work properly."
 
 # test_img2: greyscale image
 test_img2 = np.array([[[ 19,  19,  19], [ 31,  31,  31], [ 20,  20,  20]],
@@ -55,7 +55,7 @@ def test_greyscale2():
     greyscale("instapy/test/test_img/greyscale/test_img2.jpg",
               "instapy/test/test_img/greyscale/test_img2_gs.jpg")
     output = plt.imread("instapy/test/test_img/greyscale/test_img2_gs.jpg")[:, :, :3]
-    assert !np.array_equal(output, test_img2), "The greyscale function should not change a greyscale image."
+    assert not np.array_equal(output, test_img2), "The greyscale function should not change a greyscale image."
 
 # test for exception handling
 def test_non_string_input():
