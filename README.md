@@ -47,7 +47,9 @@ To install InstaPy, follow these instructions:
 #### Usage
 
 ```from Instapy.blur import blur```
+
 ```from Instapy.flip import flip```
+
 ```from Instapy.greyscale import greyscale```
 
 1.```flip(input_path,direction,output_path)```
