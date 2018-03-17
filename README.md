@@ -12,7 +12,7 @@ Date: February 9, 2018
 
 According to a [study](http://comp.social.gatech.edu/papers/icwsm15.why.bakhshi.pdf) by Yahoo Labs, “Filtered photos are 21 percent more likely to be viewed and 45 percent more likely to be commented on. Have you ever wondered how you could tranform your images using filters similar to Instagram in Python?
 
-We present this package that performs digital image processing on .png images.  It encompasses functions ranging from transformations like a simple flip, playing with color hues (rgb2gray) to 2D convolutions using a simple kernel matrix to do some interesting things! We have started with quite basic but diverse functions and hope to advance and add more with time.
+We present this package that performs digital image processing on .jpg images.  It encompasses functions ranging from transformations like a simple flip, playing with color hues (rgb2gray) to 2D convolutions using a simple kernel matrix to do some interesting things! We have started with quite basic but diverse functions and hope to advance and add more with time.
 
 #### Functions
 
@@ -25,8 +25,6 @@ This is a transformation function which flips the image either horizontally or v
 ###### Greyscale
 This function converts an RGB image to grayscale. 
 
-*__Non transparent background .png images required__*
-
 Note: See Usage section below
 
 #### Python ecosystem
@@ -36,16 +34,23 @@ Note: See Usage section below
 
 To install InstaPy, follow these instructions:
 
-1. Input the following into the Terminal: 
-```pip install git+https://github.com/UBC-MDS/InstaPy.git```
+1. Clone InstaPy repository to your local machine 
+``` git clone https://github.com/UBC-MDS/InstaPy.git```
 
-2. You are good to go and can start using InstaPy!
+2. Navigate to the cloned repository in your console.
+
+3. Type ```python setup.py install```
+
+4. You are good to go and can start using InstaPy! See usage below to see how to import functions.
+
 
 #### Usage
 
-*__Non transparent background .png images required__*
+```from Instapy.blur import blur```
 
-```import InstaPy```
+```from Instapy.flip import flip```
+
+```from Instapy.greyscale import greyscale```
 
 1.```flip(input_path,direction,output_path)```
 
@@ -54,7 +59,7 @@ Arguments:
 * ```input_path```: path to input image
 * ```direction```: direction of flip. "h" (horizontal) or "v"(vertical)
 * ```output_path```: path to output image
-* Example: ```flip("./img.png", "h","./img_flip.png")```
+* Example: ```flip("./img.jpg", "h","./img_flip.jpg")```
 
 2.```blur(input_path,output_path)```
 
@@ -62,7 +67,7 @@ Arguments:
 
 * ```input_path```: path to input image
 * ```output_path```: path to output image
-* Example: ```blur("./img.png", "./img_blur.png")```
+* Example: ```blur("./img.jpg", "./img_blur.jpg")```
 
 3.```greyscale(input_path,output_path)```
 
@@ -70,7 +75,7 @@ Arguments:
 
 * ```input_path```: path to input image
 * ```output_path```: path to output image
-* Example: ```greyscale("./img.png", "./img_gs.png")```
+* Example: ```greyscale("./img.jpg", "./img_gs.jpg")```
 
 
 
