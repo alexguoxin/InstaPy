@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and limitations under the License.
 
 import numpy as np
-import matplotlib.pyplot as plt
+import skimage.io
 
 def greyscale(input_path, output_path):
     '''
@@ -23,7 +23,7 @@ def greyscale(input_path, output_path):
     '''
     # exception handling
     try:
-        img = plt.imread(input_path)
+        img = skimage.io.imread(input_path)
     except AttributeError:
         print("Please provide a string as the path for the input image file.")
         raise
@@ -57,7 +57,7 @@ def greyscale(input_path, output_path):
 
     # exception handling
     try:
-        plt.imsave(output_path, img_gs)
+        skimage.io.imsave(output_path, img_gs)
     except AttributeError:
         print("Please provide a string as the path for the output image file.")
         raise
