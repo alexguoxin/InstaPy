@@ -25,7 +25,7 @@ This is a transformation function which flips the image either horizontally or v
 ###### Greyscale
 This function converts an RGB image to grayscale. 
 
-*__Non transparent backround .png images required__*
+*__Non transparent background .png images required__*
 
 Note: See Usage section below
 
@@ -43,7 +43,7 @@ To install InstaPy, follow these instructions:
 
 #### Usage
 
-*__Non transparent backround .png images required__*
+*__Non transparent background .png images required__*
 
 ```import InstaPy```
 
