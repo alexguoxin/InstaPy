@@ -8,25 +8,39 @@
 
 #Package dependencies
 import numpy as np
-from scipy.ndimage.filters import convolve
 import skimage.io
-import matplotlib.pyplot as plt
-import sys
-import os
-#%matplotlib inline
+
 
 def flip(img, direction,output_path):
     '''
     Flips an image in either horizonatl or vertical direction
     Arguments:
-    	img: path of input file
-    	direction: direction of flip, horizontal="h", vertical = "v"
+        img: path of input file
+        direction: direction of flip, horizontal="h", vertical = "v"
     Output: an image file in .png format
     '''
+
+    assert direction in ["h","v"], "Invalid input for flip direction"
+  
+    try:
+        input_mat = skimage.io.imread(img)
+    except AttributeError:
+        print("Please provide a string as the path for the input image file.")
+        raise
+    except TypeError:
+        print("Please provide a string as the path for the input image file.")
+        raise
+    except FileNotFoundError:
+        print("The input file/path does not exist.")
+        raise
+    except OSError:
+        print("The input file is not an image.")
+        raise
+    except Exception as e:
+        print("General Error:")
+        print(e)
+        raise
     
-    #Reading image file as matrix
-    #input_mat = plt.imread(img)
-    input_mat = skimage.io.imread(img)
     
     #Loop for direction to be either horizontal or vertical
     
@@ -49,5 +63,19 @@ def flip(img, direction,output_path):
     output_mat=np.array(output_mat, dtype=np.uint8)
     
     #Save flipped image 
-    #plt.imsave("flipped.png",output_mat)
-    skimage.io.imsave(output_path, output_mat)
+    
+    try:
+        skimage.io.imsave(output_path, output_mat)
+    except AttributeError:
+        print("Please provide a string as the path for the input image file.")
+        raise
+    except TypeError:
+        print("Please provide a string as the path for the output image file.")
+        raise
+    except FileNotFoundError:
+        print("The output path does not exist.")
+        raise
+    except Exception as e:
+        print("General Error:")
+        print(e)
+        raise
