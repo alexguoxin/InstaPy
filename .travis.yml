@@ -6,7 +6,7 @@ install:
   - pip install git+https://github.com/alexguoxin/InstaPy.git
   - pip install -U pytest
   - pip install numpy
-  - pip install matplotlib.pyplot
+  - pip install matplotlib
   - pip install skimage
 # command to run tests
 script: pytest
