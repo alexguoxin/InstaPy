@@ -84,7 +84,7 @@ Arguments:
 
 #### Collaborators:
 
-[Bhatnagar, Tarini] (https://github.com/tarinib)
+[Bhatnagar, Tarini](https://github.com/tarinib)
 
 [Guo, Xin (Alex)](https://github.com/alexguoxin)
 
