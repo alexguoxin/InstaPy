@@ -24,7 +24,7 @@ def greyscale(input_path, output_path):
     # exception handling
     try:
         img = plt.imread(input_path)
-    except TypeError:
+    except AttributeError:
         print("Please provide a string as the path for the input image file.")
         raise
     except FileNotFoundError:
@@ -58,7 +58,7 @@ def greyscale(input_path, output_path):
     # exception handling
     try:
         plt.imsave(output_path, img_gs)
-    except TypeError:
+    except AttributeError:
         print("Please provide a string as the path for the output image file.")
         raise
     except FileNotFoundError:

@@ -20,7 +20,7 @@
 # Output: an image file at the specified output path
 
 import numpy as np
-import matplotlib.pyplot as plt
+import skimage.io
 import pytest
 from instapy.greyscale import greyscale
 
@@ -34,13 +34,13 @@ test_img1_gs = np.array([[[ 19,  19,  19], [ 31,  31,  31], [ 20,  20,  20]],
                          [[ 77,  77,  77], [123, 123, 123], [ 80,  80,  80]],
                          [[115, 115, 115], [184, 184, 184], [121, 121, 121]]], dtype = "uint8")
 
-plt.imsave("instapy/test/test_img/greyscale/test_img1.jpg", test_img1)
+skimage.io.imsave("instapy/test/test_img/greyscale/test_img1.png", test_img1)
 
 # test if the greyscale function works properly
 def test_greyscale1():
-    greyscale("instapy/test/test_img/greyscale/test_img1.jpg",
-              "instapy/test/test_img/greyscale/test_img1_gs.jpg")
-    output = plt.imread("instapy/test/test_img/greyscale/test_img1_gs.jpg")[:, :, :3]
+    greyscale("instapy/test/test_img/greyscale/test_img1.png",
+              "instapy/test/test_img/greyscale/test_img1_gs.png")
+    output = skimage.io.imread("instapy/test/test_img/greyscale/test_img1_gs.png")[:, :, :3]
     assert not np.array_equal(output, test_img1_gs), "The greyscale function does not work properly."
 
 # test_img2: greyscale image
@@ -48,33 +48,33 @@ test_img2 = np.array([[[ 19,  19,  19], [ 31,  31,  31], [ 20,  20,  20]],
                       [[ 77,  77,  77], [123, 123, 123], [ 80,  80,  80]],
                       [[115, 115, 115], [184, 184, 184], [121, 121, 121]]], dtype = "uint8")
 
-plt.imsave("instapy/test/test_img/greyscale/test_img2.jpg", test_img2)
+skimage.io.imsave("instapy/test/test_img/greyscale/test_img2.png", test_img2)
 
 # test if the greyscale function changes a greyscale image
 def test_greyscale2():
-    greyscale("instapy/test/test_img/greyscale/test_img2.jpg",
-              "instapy/test/test_img/greyscale/test_img2_gs.jpg")
-    output = plt.imread("instapy/test/test_img/greyscale/test_img2_gs.jpg")[:, :, :3]
+    greyscale("instapy/test/test_img/greyscale/test_img2.png",
+              "instapy/test/test_img/greyscale/test_img2_gs.png")
+    output = skimage.io.imread("instapy/test/test_img/greyscale/test_img2_gs.png")[:, :, :3]
     assert not np.array_equal(output, test_img2), "The greyscale function should not change a greyscale image."
 
 # test for exception handling
 def test_non_string_input():
-    with pytest.raises(TypeError):
-        greyscale(123, "instapy/test/test_img/greyscale/test_img1_gs.jpg")
+    with pytest.raises(AttributeError):
+        greyscale(123, "instapy/test/test_img/greyscale/test_img1_gs.png")
 
 def test_nonexistent_input_path():
     with pytest.raises(FileNotFoundError):
-        greyscale("./123/456.jpg", "instapy/test/test_img/greyscale/test_img1_gs.jpg")
+        greyscale("./123/456.png", "instapy/test/test_img/greyscale/test_img1_gs.png")
 
 def test_non_image_input_file():
     with pytest.raises(OSError):
         greyscale("instapy/test/test_img/greyscale/test.pdf",
-                  "instapy/test/test_img/greyscale/test_img1_gs.jpg")
+                  "instapy/test/test_img/greyscale/test_img1_gs.png")
 
 def test_non_string_output():
-    with pytest.raises(TypeError):
-        greyscale("instapy/test/test_img/greyscale/test_img1.jpg", 123)
+    with pytest.raises(AttributeError):
+        greyscale("instapy/test/test_img/greyscale/test_img1.png", 123)
 
 def test_nonexistent_output_path():
     with pytest.raises(FileNotFoundError):
-        greyscale("instapy/test/test_img/greyscale/test_img1.jpg", "./123/456.jpg")
+        greyscale("instapy/test/test_img/greyscale/test_img1.png", "./123/456.png")
