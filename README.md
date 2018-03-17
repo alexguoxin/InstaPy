@@ -36,7 +36,9 @@ Note: See Usage section below
 
 To install InstaPy, follow these instructions:
 
-1. Input the following into the Terminal: pip install git+https://github.com/UBC-MDS/InstaPy.git
+1. Input the following into the Terminal: 
+```pip install git+https://github.com/UBC-MDS/InstaPy.git```
+
 2. You are good to go and can start using InstaPy!
 
 #### Usage
