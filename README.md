@@ -21,7 +21,7 @@ This function performs convolution to de-emphasizes differences in adjacent pixe
 ###### Flip
 This is a transformation function which flips the image either horizontally or vertically.
 
-###### Grayscale
+###### Greyscale
 This function converts an RGB image to grayscale. "amount" defines the proportion of conversion, with 100% leading to a complete grayscale and a value of 0% does not change the image at all.
 
 *__Non transparent backround .png images required__*
