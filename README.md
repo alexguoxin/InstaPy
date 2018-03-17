@@ -1,5 +1,6 @@
 ## InstaPy
 
+[![Build Status](https://travis-ci.org/UBC-MDS/InstaPy.svg?branch=master)](https://travis-ci.org/UBC-MDS/InstaPy)
 
 #### A Collaborative Software Development Project
 
