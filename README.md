@@ -1,17 +1,11 @@
 ## InstaPy
 
-![](img/logo.png)
 
 #### A Collaborative Software Development Project
+
+<img src="img/logo.png" align="right" border = "10" width="150" height="150"/>
+
 Date: February 9, 2018
-
-Collaborators:
-
-Bhatnagar, Tarini : [Github Profile](https://github.com/tarinib)
-
-Guo, Xin (Alex): [Github Profile](https://github.com/alexguoxin)
-
-Nikel, Indiana: [Github Profile](https://github.com/indiana-nikel)
 
 #### Overview
 
@@ -86,3 +80,12 @@ Arguments:
 
 ```skimage.io```
 
+
+
+#### Collaborators:
+
+[Bhatnagar, Tarini] (https://github.com/tarinib)
+
+[Guo, Xin (Alex)](https://github.com/alexguoxin)
+
+[Nikel, Indiana](https://github.com/indiana-nikel)
