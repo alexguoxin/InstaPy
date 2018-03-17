@@ -21,7 +21,7 @@ def flip(img, direction,output_path):
     '''
 
     assert direction in ["h","v"], "Invalid input for flip direction"
-  
+
     try:
         input_mat = skimage.io.imread(img)
     except AttributeError:
@@ -40,10 +40,10 @@ def flip(img, direction,output_path):
         print("General Error:")
         print(e)
         raise
-    
-    
+
+
     #Loop for direction to be either horizontal or vertical
-    
+
     #Vertical Flip
     if direction == "v":
         asc=range(0, input_mat.shape[0])
@@ -57,13 +57,13 @@ def flip(img, direction,output_path):
         desc=list(reversed(asc))
         output_mat = input_mat.copy()
         output_mat[:,asc] = input_mat[:,desc]
-   
-        
+
+
     #Converting data type
     output_mat=np.array(output_mat, dtype=np.uint8)
-    
-    #Save flipped image 
-    
+
+    #Save flipped image
+
     try:
         skimage.io.imsave(output_path, output_mat)
     except AttributeError:

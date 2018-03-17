@@ -4,11 +4,11 @@
 #You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
 # March 2018
-# This script tests the function from flip.R.
+# This script tests the function from blur.R.
 
 # This script tests blur function of InstaPy package.
 # This function blurs an image.
-# Input  : An image in .pngnformat
+# Input  : An image in .png format
 # Output : A flipped image in .png format
 
 import numpy as np
@@ -63,5 +63,3 @@ def test_nonexistent_output_path():
 def test_non_image_input_file():
     with pytest.raises(OSError):
         blur("instapy/test/test_img/blur/test.pdf", "instapy/test/test_img/blur/blur.png")
-
-
