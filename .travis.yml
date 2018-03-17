@@ -7,6 +7,6 @@ install:
   - pip install -U pytest
   - pip install numpy
   - pip install matplotlib
-  - pip install skimage
+  - pip install scikit-image
 # command to run tests
 script: pytest
