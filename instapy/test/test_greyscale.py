@@ -19,7 +19,6 @@
 #        output_path: string, path for the output image file
 # Output: an image file at the specified output path
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pytest
