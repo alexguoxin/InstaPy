@@ -38,10 +38,7 @@ Note: See Usage section below
 
 To install InstaPy, follow these steps in Terminal:
 
-1. Clone InstaPy repository to your local machine 
-``` 
-git clone https://github.com/UBC-MDS/InstaPy.git
-```
+1. Clone InstaPy repository to your local machine `git clone https://github.com/UBC-MDS/InstaPy.git`
 
 2. Navigate to the cloned repository.
 
