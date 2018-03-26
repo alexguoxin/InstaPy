@@ -4,13 +4,13 @@
 
 DSCI 524 Collaborative Software Development Project
 
-<img src="img/logo.png" align="right" border = "10" width="150" height="150"/>
-
 February 9, 2018
+
+<img src="img/logo.png" align="right" border = "10" width="150" height="150"/>
 
 ### Overview
 
-According to a [study](http://comp.social.gatech.edu/papers/icwsm15.why.bakhshi.pdf) by Yahoo Labs, “Filtered photos are 21 percent more likely to be viewed and 45 percent more likely to be commented on.” Have you ever wondered how you could tranform your images using filters similar to Instagram in Python?
+According to a [study](http://comp.social.gatech.edu/papers/icwsm15.why.bakhshi.pdf) by Yahoo Labs, "Filtered photos are 21 percent more likely to be viewed and 45 percent more likely to be commented on." Have you ever wondered how you could tranform your images using filters similar to Instagram in Python?
 
 We present this package that performs digital image processing on .jpg images.  It encompasses functions ranging from transformations like a simple flip, playing with color hues (rgb2gray) to 2D convolutions using a simple kernel matrix to do some interesting things! We have started with quite basic but diverse functions and hope to advance and add more with time.
 
